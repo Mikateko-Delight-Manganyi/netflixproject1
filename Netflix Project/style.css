@@ -1,0 +1,615 @@
+/*Resetting default margin and padding*/
+:root{
+  --bg: #000;
+  --text: #fff;
+  --muted: #cfcfcf;
+  --accent: #e50914;
+  --card: #242424;
+  --container: 1100px;
+}
+
+* { box-sizing: border-box; }
+html, body { height: 100%; margin: 0; font-family: Arial, sans-serif }
+
+/* small utility */
+.container { max-width: var(--container); margin: 0 auto; padding: 0 16px; }
+
+/* visually hidden for accessible labels */
+.visually-hidden { position: absolute !important; height: 1px; width: 1px; overflow: hidden; clip: rect(1px,1px,1px,1px); white-space: nowrap; }
+
+
+/*Background image for the hero*/
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom,rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 1) 100%), url(./assets/1background.jpg) no-repeat center center/cover;
+  position: relative;
+  height: 100vh; /* fills the screen */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 0 20px;
+}
+
+/* Hero Content */
+.hero-content {
+  position: relative;
+  align-items: center;
+  z-index: 2;
+  max-width: 700px;
+}
+
+
+/* Keep form spaced below */
+.hero-content form {
+  margin-top: 30px;
+}
+
+
+body {
+  background: #000; /* dark background like Netflix */
+  color: #fff;
+  font-family: 'Arial', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1.4;
+}
+
+/* Make anchors inherit and remove underline by default */
+a { color: inherit; text-decoration: none; }
+
+/*Header Section*/
+
+/*Navigation bar*/
+nav{
+  display: flex;
+  position: absolute;/*Makes the nav stay on top of the background image*/
+  top: o;
+  left: 0;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;/*Logo will be on the left side and sign in on the right*/
+  padding: 18px 60px;/*Padding on top and bottom*/
+  z-index: 1000;/*Makes sure the nav is on top of the background image*/
+  background-color: transparent; /*transparent background */ 
+}
+
+
+/* Logo */
+.logo{
+    width: 150px;
+    cursor: pointer;
+}
+
+/* Sign In Button */
+.sign-in{
+    color: white;
+    background-color:#e50914;
+    border: none;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 7px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+h1{
+    font-size: 50px;
+    margin-top: 20%;
+    text-align: center;
+}
+*/
+.banner-section>h3,p{
+    font-size: 20px;
+    text-align: center;
+    margin-top: 20px;
+}
+/* Email signup section */
+.email-signup {
+  color: whitesmoke;
+  display: flex;
+  justify-content: center;
+  align-items: stretch;
+  gap: 0.5rem;
+  max-width: 600px;   /* keeps it from stretching too wide */
+  margin: 1rem auto;  /* center align */
+}
+
+.email-signup input {
+  background-color: rgba(35, 35, 35, 0.4);
+  color: white;
+  font-weight: 600;
+  flex: 2;               /* input takes more space */
+  padding: 1rem;
+  font-size: 1rem;
+  border: 2px solid rgba(255, 255, 255, 0.2); /* A light, semi-transparent border */;
+  border-radius: 4px 0 0 4px;
+  outline: none;
+}
+.email-signup .button {
+  flex: 1;                  /* button takes equal stretch */
+  padding: 1rem;
+  font-size: 1.2rem;
+  background-color: #e50914;
+  color: white;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  border-radius: 0 4px 4px 0;
+}
+.email-signup .button:hover {
+  background-color: #f40612;
+}
+
+.curve-overlay {
+  position: absolute;
+  bottom: 0; /* sit at bottom of hero or section */
+  left: 0;
+  width: 100%;
+  height: 200px; /* adjust to move curve higher or lower */
+  z-index: 0;
+  pointer-events: none; /* doesn’t block clicks */
+}
+
+.curve-overlay {
+  position: absolute;
+  bottom: 0; /* sit at bottom of hero or section */
+  left: 0;
+  width: 100%;
+  height: 200px; /* adjust to move curve higher or lower */
+  z-index: 0;
+  pointer-events: none; /* doesn’t block clicks */
+}
+
+.curve-overlay svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+.curve-overlay path {
+  shape-rendering: geometricPrecision;
+}
+
+/* Optional subtle shadow/glow for the curve line */
+.curve-overlay path:last-child {
+  filter: drop-shadow(0 4px 10px rgba(32, 18, 49, 0.866));
+}
+
+
+
+
+/* Video wrapper: responsive  */
+.video-wrapper { 
+  max-width: 1000px; 
+  margin: 24px auto; 
+  position: relative; 
+  padding-top: 56.25%; 
+}
+.video-wrapper iframe {
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  width: 100%; 
+  height: 100%;
+  border: 0; 
+  border-radius: 10px;
+}
+
+.button{
+  background-color:#e50914;
+  color:white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+
+/* Trending Section */
+.trending {
+  padding: 40px 20px;
+}
+
+.trending h2 {
+  font-size: 1.8rem;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+/* Gradient strip (Netflix-style glow) */
+.gradient-strip {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background: linear-gradient(90deg, #e50914, #221f1f, #0a84ff);
+  filter: blur(40px);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* (Scrollable Container) Trending / horizontal scrollable */
+.trending-container {
+  display: flex;
+  gap: 1rem;
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  padding: 1rem 0 3rem;  /* extra bottom padding so numbers are visible */
+  max-width: 1100px;  /* same as .container */
+  margin: 0 auto;     /* center it */
+  scroll-behavior: smooth;   /* smooth anchors */
+  -webkit-overflow-scrolling: touch;
+}
+/* show a visible scrollbar (desktop) */
+.trending-container::-webkit-scrollbar {
+   height: 8px;
+}
+.trending-container::-webkit-scrollbar-thumb {
+  background: #555;
+  border-radius: 4px;
+}
+.trending-container { 
+  scrollbar-width: thin; 
+  scrollbar-color: rgba(255,255,255,0.12) transparent; 
+}
+.trending-container::-webkit-scrollbar-track {
+  background: #000;
+}
+
+/* Movie Card ,each card acts as the positioned parent for the rank badge */ 
+.movie-card {
+  position: relative;     /* <-- important for absolute .ranking */
+  flex: 0 0 calc((100% - 5rem) / 6);   /* show 6 cards per view (subtract gap space) */
+  min-width: 130px;          /* fallback on very small screens */
+  scroll-snap-align: start;
+  text-align: center;
+  overflow: visible;    /* allow badge to overflow */
+  background-color: ;
+}
+
+.movie-card img {
+  width: 100%;
+  border-radius: 8px;
+  display:block;
+}
+
+/* ranking badge — overlapping bottom-left (Rank Numbers) */
+.ranking {
+  position: absolute;
+  left: -20px;    /* distance from left edge of card(slightly outside card like Netflix) */
+  bottom: -28px;  /* pushes number just below the card */
+  z-index: 6;
+  font-size: 5rem;  /*big bold number */
+  font-weight: 800;
+  color:black;
+  -webkit-text-stroke: 2px white;/* white outline */
+  background: rgba(0,0,0,0.35);
+  padding: 4px 8px;
+  border-radius: 6px;
+  line-height: 1;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.45);/**Needs to be more transperent*/
+}
+.trending-now {
+  position: relative;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.trending-now::before,
+.trending-now::after {
+  z-index: 1;
+}
+
+.trending-now::before {
+  left: 0;
+  background: linear-gradient(to right, black, transparent);
+}
+
+.trending-now::after {
+  right: 0;
+  background: linear-gradient(to left, black, transparent);
+}
+
+/* responsive: fewer cards on narrower screens */
+@media (max-width: 900px) {
+  .movie-card { flex: 0 0 calc((100% - 3rem) / 4); } /* show 4 cards */
+}
+
+@media (max-width: 600px) {
+  .movie-card { flex: 0 0 calc((100% - 2rem) / 2); } /* show 2 cards */
+}
+
+/* optional arrow styling (visual only without JS) */
+.scroll-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.6);
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  cursor: pointer;
+  z-index: 5;
+  border-radius: 4px;
+}
+.scroll-btn.right { right: 8px; }
+.scroll-btn.left  { left: 8px; }
+
+/*THE MORE REASON SECTION */
+.more-reasons {
+  max-width: 1100px;   /* matches other sections */
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.more-reasons h2 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  color: white;
+  text-align: left;
+}
+
+/* Grid layout for cards, Excatly 4 columns */
+.more-reasons .cards {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* always 4 cards per row */
+  gap: 1.5rem;
+}
+
+/* Card design */
+.card { 
+    position: relative;
+    height: 220px;
+    padding: 15px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: linear-gradient(135deg, #73064741 0%, #741f8b80 50%, #1f1f3f 100%);
+    box-shadow: 0 4px 15px rgba(115, 6, 73, 0.299);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Inner Hover Effect with colorful gradient */
+.card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    background: linear-gradient(
+        135deg,
+        rgba(128, 0, 128, 0.5),   /* purple */
+        rgba(75, 0, 130, 0.5),    /* dark blue / indigo */
+        rgba(255, 105, 180, 0.4), /* pink */
+        rgba(0, 0, 0, 0.3)        /* black shade */
+    );
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 0;
+}
+
+.card:hover::before {
+    opacity: 1; /* fully show inner gradient on hover  */
+}
+
+/* Card body (text section) */
+.card-body {
+    position: relative; /* stays above ::before */
+    z-index: 1;
+}
+
+.card-body h3 {
+    margin: 0 0 0.5rem 0;
+    font-size: 1rem;
+    color: white;
+}
+
+.card-body p {
+    position: relative;
+    font-size: 0.85rem;
+    line-height: 1.3;
+    color: #ccc;
+    z-index: 1;
+}
+
+/* Card SVG icons */
+.card svg {
+    margin-top: auto; /* push icon to bottom */
+    align-self: flex-end; /* push icon to right */
+    width: 50px;
+    height: 50px;
+    position: relative; /* above inner hover */
+    z-index: 1;
+}
+
+/* Card Hover Transform */
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 20px rgba(229, 9, 20, 0.6);
+}
+
+
+/* FAQ Section */
+.faq {
+  max-width: 800px;
+  margin: 50px auto;
+  padding: 0 20px;
+}
+
+.faq h2 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+/* Each collapsible card */
+.faq details {
+  background: #ffffff1a;        /* dark grey background */
+  margin-bottom: 10px;        /* space between cards */
+  border-radius: 4px;         /* slight rounded corners */
+  overflow: hidden;
+}
+.faq-container{
+  display: flex;
+  flex-direction: column; /* Stack cards vertically */
+  justify-content: center; /* Center the cards horizontally */
+  max-width: 12000px; /* Limit the maximum width of the container */
+}
+/* Creating Cards like for the FAQ */
+.card-faq {
+  margin-bottom: 10px;/* Adjust this value for smaller spacing */
+  background-color: #ffffff1a;
+  display : flex; /* Ensures content is properly aligned within the card */
+  flex-direction: column;
+  overflow: hidden;
+  padding: 20px;
+}
+
+/* Summary = the clickable question */
+.faq summary {
+  padding: 20px;
+  cursor: pointer;
+  font-size: 18px;
+  font-weight: 500;
+  position: relative;
+  list-style: none;           /* removes default triangle */
+}
+
+/* Custom plus sign on right */
+.faq summary::after {
+  content: "+";
+  position: absolute;
+  right: 20px;
+  font-size: 24px;
+  transition: transform 0.2s ease;
+}
+
+/* Change plus to minus when open */
+.faq details[open] summary::after {
+  content: "−";
+}
+
+/* Answer text */
+.faq p {
+  padding: 0 20px 20px;
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #e6e6e6;
+}
+/* Align headings like FAQ */
+#reasons-heading, 
+.trending-now h2,
+#trailer-heading {
+  max-width: 1000px;
+  margin: 0 auto 1rem auto;
+  padding-left: 1rem; /* aligns with content */
+}
+
+/*WORKING ON THE LAST FOOTER*/
+/* General container to keep content aligned */
+.container {
+  max-width: 1200px; /* adjust to match your FAQ section */
+  margin: 0 auto;    /* centers content */
+  padding: 0 20px;   /* small padding for spacing */
+}
+
+/* Footer styling/wrapper */
+.lastfooter {
+  background-color: #000; /* Netflix black footer */
+  color: #757575;
+  padding: 40px 60px;/* stretch spacing */
+}
+
+/* Footer text + links */
+.lastfooter p,
+.lastfooter a {
+  margin: 5px 0;/* adds spacing between paragraphs */
+  text-align: left;
+  font-size: 14px;
+}
+
+/* Grid layout for footer links */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 equal columns */
+  gap: 20px;
+  margin: 20px 0;
+}
+
+/*Styling each column*/
+.column li{
+  list-style: none; /*Removes the default bullet points*/
+  margin-bottom: 10px; /*Adds space between each list item*/
+}
+
+.column a {
+  color: #757575;
+  text-decoration: underline;/* Underline the links/text in each list item*/
+  font-size: 14px;
+}
+
+
+.footer-text {
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 1.1rem;
+}
+
+/* Language select + bottom section */
+.footer-bottom {
+  margin-top: 20px;
+}
+.language-btn {
+  background-color: #000;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;                /* space between icon and text */
+  background: transparent; /* Netflix style */
+  color: #fff;
+  border: 1px solid #757575;
+  border-radius: 4px;
+  padding: 10px 15px;
+  font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 16px; /* adds space below button */
+}
+
+.language-btn:hover {
+  border-color: #fff;
+}
+
+.footer-icon {
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+/* Underline and style the phone number */
+.phone-number {
+  text-decoration: underline;
+  margin-left: 5px; /* small space after "Call" */
+  color: #757575;
+}
+
+#Learnmoretext{
+  color: #0a84ff;
+}
+.copyright {
+  margin-bottom: 20px; /* adds space between copyright and captcha note */
+  font-size: 13px;
+  color: #757575;
+}
+
+.captcha-note {
+  font-size: 12px;
+  color: #757575;
+  line-height: 1.5;
+}
+
